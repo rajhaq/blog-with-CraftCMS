@@ -1,10 +1,187 @@
+categoryGroups:
+  0e712375-3d24-416f-ae08-730ebf036483:
+    handle: blog
+    name: blog
+    siteSettings:
+      e1cbf2f9-12b8-489b-94a6-ce3308cdb40e:
+        hasUrls: true
+        template: blog/_category
+        uriFormat: 'categories/{slug}'
+    structure:
+      maxLevels: null
+      uid: be0c974c-21b5-40d5-8041-941a7a2a21de
+dateModified: 1552415139
 email:
   fromEmail: zubaer.haque@gmail.com
   fromName: 'Zubaer Haque''s Blog'
   transportType: craft\mail\transportadapters\Sendmail
 fieldGroups:
+  375dadbd-088d-4293-8f3c-b42f80bd3bbf:
+    name: Blog
+  422def87-8214-40bf-af74-2836ae19b390:
+    name: Page
   abdb4c54-c826-4751-a26a-1c98d27ac020:
     name: Common
+fields:
+  1a32cd23-47cf-49b4-bdc8-6abea74b7026:
+    contentColumnType: text
+    fieldGroup: 422def87-8214-40bf-af74-2836ae19b390
+    handle: pagecopy
+    instructions: ''
+    name: PageCopy
+    searchable: true
+    settings:
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  c4c6c3cd-47fe-43bb-ac25-40249d395235:
+    contentColumnType: string
+    fieldGroup: 375dadbd-088d-4293-8f3c-b42f80bd3bbf
+    handle: category
+    instructions: ''
+    name: Category
+    searchable: true
+    settings:
+      branchLimit: ''
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      source: 'group:0e712375-3d24-416f-ae08-730ebf036483'
+      sources: '*'
+      targetSiteId: null
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Categories
+  d71f6475-d096-4cf9-8bf5-0e1e88841059:
+    contentColumnType: text
+    fieldGroup: 375dadbd-088d-4293-8f3c-b42f80bd3bbf
+    handle: blogBody
+    instructions: 'Blog total body'
+    name: 'Blog Body'
+    searchable: true
+    settings:
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  e9708163-e305-49d1-bd19-b243f3ce3549:
+    contentColumnType: text
+    fieldGroup: 375dadbd-088d-4293-8f3c-b42f80bd3bbf
+    handle: blogIntroduction
+    instructions: 'short, one line info about blog'
+    name: 'Blog Introduction'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+sections:
+  27a239e3-224d-4566-a7fb-67790b4d5260:
+    enableVersioning: true
+    entryTypes:
+      9606c1bb-f7b6-4a1e-8889-1f83a022f9fc:
+        fieldLayouts:
+          0d9a759b-3578-41b9-b5d4-9cfd1a74d0cf:
+            tabs:
+              -
+                fields:
+                  c4c6c3cd-47fe-43bb-ac25-40249d395235:
+                    required: false
+                    sortOrder: 1
+                  d71f6475-d096-4cf9-8bf5-0e1e88841059:
+                    required: false
+                    sortOrder: 3
+                  e9708163-e305-49d1-bd19-b243f3ce3549:
+                    required: false
+                    sortOrder: 2
+                name: Blog
+                sortOrder: 1
+        handle: blog
+        hasTitleField: true
+        name: Blog
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: blog
+    name: Blog
+    propagateEntries: true
+    siteSettings:
+      e1cbf2f9-12b8-489b-94a6-ce3308cdb40e:
+        enabledByDefault: true
+        hasUrls: true
+        template: blog/_entry
+        uriFormat: 'blog/{slug}'
+    type: channel
+  8bd0420c-cb4c-4abf-9ef5-0fa30d4d8576:
+    enableVersioning: true
+    entryTypes:
+      2fe68007-5273-4d21-9bbd-fed302c44dee:
+        fieldLayouts:
+          efff7a23-87b9-48d4-8f1f-0758bf3a8427:
+            tabs:
+              -
+                fields:
+                  1a32cd23-47cf-49b4-bdc8-6abea74b7026:
+                    required: false
+                    sortOrder: 1
+                name: Page
+                sortOrder: 1
+        handle: page
+        hasTitleField: true
+        name: Page
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: 'Page Title'
+    handle: page
+    name: Page
+    propagateEntries: true
+    siteSettings:
+      e1cbf2f9-12b8-489b-94a6-ce3308cdb40e:
+        enabledByDefault: true
+        hasUrls: true
+        template: page/_entry
+        uriFormat: 'page/{parent.uri}/{slug}'
+    structure:
+      maxLevels: ''
+      uid: ed055273-84e2-4e14-b7f9-1ecee3365d6d
+    type: structure
+  aa53d3a7-382f-4b31-8845-18b4d2b3af51:
+    enableVersioning: true
+    entryTypes:
+      fe39e47d-2730-4b79-8f72-4a28b75d609f:
+        handle: homepage
+        hasTitleField: false
+        name: Homepage
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: null
+    handle: homepage
+    name: Homepage
+    propagateEntries: true
+    siteSettings:
+      e1cbf2f9-12b8-489b-94a6-ce3308cdb40e:
+        enabledByDefault: true
+        hasUrls: true
+        template: index
+        uriFormat: /
+    type: single
 siteGroups:
   ccf18982-bc90-4b03-bf09-d0d35dea6f68:
     name: 'Zubaer Haque''s Blog'
