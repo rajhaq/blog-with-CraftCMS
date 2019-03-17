@@ -42,7 +42,28 @@
           </div>
           <hr>
         {% endfor %}
+{% for entry in craft.entries
+          .section('album')
+          .limit(10)
+          .all()
+          %}
+          <div class="post-preview">
+            <a href="{{ entry.url }}">
+              <h2 class="post-title">
+                {{entry.title}}
+              </h2>
+            </a>
 
+              <h3 class="post-subtitle">
+                {{ entry.photoalbum }}
+              </h3>
+                {{ entry.blogBody }}
+            <p class="post-meta">Posted by
+              <a href="#">{{ entry.author }}</a>
+              on {{ entry.postDate | date('M d, Y')}}</p>
+          </div>
+          <hr>
+        {% endfor %}
           <!-- Pager -->
           <div class="clearfix">
             <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>

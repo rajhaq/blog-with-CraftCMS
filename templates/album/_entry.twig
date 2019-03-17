@@ -2,21 +2,17 @@
 
     {% block main %}
     <!-- Page Header -->
-    {% set entryImage = entry.image.one() %}
-    <header class="masthead" style="background-image: url('{{ entryImage.getUrl() }}')">
+    <header class="masthead" style="background-image: url('../img/home-bg-new.jpg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="post-heading">
               <h1>{{entry.title}}</h1>
-              <h2 class="subheading">{{entry.blogIntroduction}}</h2>
+              <h2 class="subheading">{{entry.photoalbum}}</h2>
               <span class="meta">Posted by
                 <a href="#">{{ entry.author }}</a>
                 on {{ entry.postDate | date('M d, Y')}}
-                {% for category in entry.category.all() %}
-                    {{ category}}
-                {% endfor %}
                 </span>
             </div>
           </div>
